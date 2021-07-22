@@ -1,0 +1,33 @@
+<div class="content">
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Salir</a></li>
+            <li><a href="#" onclick="selectHour();">Regresar</a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+
+        <div class="inf texto-centrado">
+            <h2>
+                <span id="nameUser">{{nombre}}</span>, aquí calendario completo de turno
+            </h2>
+        </div>
+
+        <section class="listContainer flex texto-centrado" id="listContainer">
+
+            {{#each listHs}}
+            <div class="columna">
+                <h2>Fecha: {{fecha}}</h2>
+                <hr>
+                <h3>Hora: {{horario}}</h3>
+            </div>
+            {{/each}}
+
+        </section>
+
+    </main>
+
+    {{>footer}}
+
+</div>

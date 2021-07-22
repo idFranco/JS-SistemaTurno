@@ -1,0 +1,65 @@
+<div class="content">
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Salir</a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+
+        <div class="section">
+
+            <div class="container columnflex">
+                <div class="caption">
+                    <form class='form-date' id='form-date' action='/loadDate' method='post'>
+                        <div>
+                            <div id="loadDate">{{loadDate}}</div>
+                            <div class="inf" id="lbl_nameUser" name="lbl_nameUser"><strong>Bienvenido {{nombre}}</strong></div>
+                            <hr>
+                            <div class="inf">
+                                <label for="party"> - Selector de fecha:</label>
+                                <input type="date" id="calendar" name="calendar">
+                                <button type='submit' class='btn btn-primary'>Cargar fecha</button>
+                            </div>
+                        </div>
+                    </form>
+                    <hr>
+                    <div class="inf">
+                        <label> - Turno completo </label>
+                        <button onclick='horarioCompleto();'>Ver listado</button>
+                    </div>
+                </div>
+                <div class="caption">
+                    <div id="table">{{table}}</div>
+
+                    <table class='table' id='rwd-table' border='1'>
+                        <thead class='thead'>
+                            <tr>
+                                <th scope='col'>Hora</th>
+                                <th scope='col'>Estado</th>
+                                <th scope='col'>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each listHs}}
+                            <tr>
+                                <td class='colHs' name='tableHour'>{{horario}}</td>
+                                <td class='colNa' name='tableEstate'>{{estado}}</td>
+                                <td class='colOp' name='tabeOption'>
+                                    <button class='selectItem'>{{opcion}}</button>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    {{>footer}}
+
+</div>

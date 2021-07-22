@@ -1,0 +1,60 @@
+<div class="body p-4">
+    <main class="container-fluid">
+        <div class="card">
+            <div class="card-body p-4">
+                <div class="row">
+
+                    <section>
+                        <article class="articleText">
+                            <section>
+                                <div class="col-md-12 p-4">
+                                    <div class="txt" id="txt">
+
+                                    </div>
+                                </div>
+                            </section>
+                        </article>
+                        <article class="articleLogin">
+                            <section>
+                                <div class="col-md-12">
+                                    <div id="formLogin">
+                                        <form class='form-login' id='form-login' action='/login-user' method='post'>
+                                            <h3>¡Ingresar! <i class='bi bi-person-circle'></i></h3>
+                                            <div class='input'>
+                                                <input type='email' class='form-control' name='email' id='email'
+                                                    placeholder='Email' maxlength='50' required>
+                                            </div>
+                                            <div class='input'>
+                                                <input type='password' class='form-control' name='password'
+                                                    id='password' placeholder='Contraseña' minlength='4' maxlength='12'
+                                                    required>
+                                            </div>
+                                            <div class='d-grid gap-2 button'>
+                                                <button type='submit' class='btn btn-primary'>Iniciar sesión <i
+                                                        class='bi bi-person-check-fill'></i></button>
+                                            </div>
+                                            <div id='mensaje-error'>{{viewError}}</div>
+                                        </form>
+                                        <div class='d-grid gap-2 button'>
+                                            <button type='submit' class='btn btn-outline-success'
+                                                onclick='create();'>Crear
+                                                cuenta <i class='bi bi-person-plus-fill'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </article>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+        {{>footer}}
+
+    </main>
+</div>
+
+<script id="script1" src="" integrity="" crossorigin="anonymous"></script>
+<script id="script2" src="" integrity="" crossorigin="anonymous"></script>
+<script id="script3" src="" integrity="" crossorigin="anonymous"></script>
